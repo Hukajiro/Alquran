@@ -32,3 +32,11 @@ Kontribusi sangat terbuka! Silakan fork dan pull request jika ingin menambahkan 
 ## 📄 Lisensi
 
 Proyek ini menggunakan lisensi [MIT](LICENSE).
+
+## 🧑‍💻 Dibuat Oleh
+
+Aplikasi ini dikembangkan oleh Hukajiro sebagai Ujian Tengah Semester mata kuliah Pemrograman Mobile.  
+Jangan ragu untuk menghubungi atau mengunjungi profil GitHub:
+
+- GitHub: 
+
