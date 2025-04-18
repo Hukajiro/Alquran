@@ -38,5 +38,5 @@ Proyek ini menggunakan lisensi [MIT](LICENSE).
 Aplikasi ini dikembangkan oleh Hukajiro sebagai Ujian Tengah Semester mata kuliah Pemrograman Mobile.  
 Jangan ragu untuk menghubungi atau mengunjungi profil GitHub:
 
-- GitHub: 
+- GitHub: https://github.com/Hukajiro
 
