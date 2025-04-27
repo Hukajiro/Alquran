@@ -2,6 +2,7 @@ package com.example.alquran.adapter;
 
 import android.content.Context;
 import android.content.Intent;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -31,6 +32,7 @@ public class SurahAdapter extends RecyclerView.Adapter<SurahAdapter.ViewHolder> 
     @Override
     public void onBindViewHolder(ViewHolder holder, int position) {
         Surah surah = surahList.get(position);
+        Log.d("SurahAdapter", "Surah: " + surah.getName());
         holder.tvSurahNumber.setText(String.valueOf(surah.getNumber()));
         holder.tvSurahName.setText(surah.getName());
         holder.tvSurahLatin.setText(surah.getEnglishName());

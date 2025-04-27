@@ -12,4 +12,7 @@ public interface ApiService {
 
     @GET("v1/surah/{surah_number}/editions/quran-uthmani,id.indonesian")
     Call<SurahDetailResponse> getSurahDetail(@Path("surah_number") int surahNumber);
+
+    @GET("v1/surah/{surah_number}/editions/quran-uthmani,ar.alafasy")
+    Call<SurahDetailResponse> getSurahDetailWithAudio(@Path("surah_number") int surahNumber);
 }
