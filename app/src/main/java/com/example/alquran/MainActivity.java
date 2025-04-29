@@ -1,5 +1,6 @@
 package com.example.alquran;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
@@ -12,6 +13,13 @@ import com.example.alquran.model.SurahResponse;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
+import android.widget.Button;
+import android.widget.ImageView;
+import com.bumptech.glide.Glide;
+import com.google.android.gms.auth.api.signin.GoogleSignIn;
+import com.google.android.gms.auth.api.signin.GoogleSignInOptions;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 
 public class MainActivity extends AppCompatActivity {
     private RecyclerView recyclerView;
@@ -22,9 +30,30 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        Button btnLogout = findViewById(R.id.btn_logout);
+        ImageView imgProfile = findViewById(R.id.img_profile);
+
+        FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
+        if (user != null && user.getPhotoUrl() != null) {
+            Glide.with(this)
+                    .load(user.getPhotoUrl())
+                    .placeholder(R.drawable.ic_launcher_foreground)
+                    .circleCrop()
+                    .into(imgProfile);
+        }
+
+        btnLogout.setOnClickListener(v -> {
+            FirebaseAuth.getInstance().signOut();
+            GoogleSignIn.getClient(this, GoogleSignInOptions.DEFAULT_SIGN_IN)
+                    .signOut()
+                    .addOnCompleteListener(task -> {
+                        startActivity(new Intent(this, LoginActivity.class));
+                        finish();
+                    });
+        });
+
         recyclerView = findViewById(R.id.rv_surah);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
-
         fetchSurahList();
     }
 

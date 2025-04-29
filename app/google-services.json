@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "249430564532",
+    "project_id": "adadda-d2451",
+    "storage_bucket": "adadda-d2451.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:249430564532:android:c93826551fc7eed00cc1e1",
+        "android_client_info": {
+          "package_name": "com.example.alquran"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "249430564532-t6s4gb3pai3je81sl07769ba9ubsflk1.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.alquran",
+            "certificate_hash": "993bac402a3270c714056e12315185e11e30e7f0"
+          }
+        },
+        {
+          "client_id": "249430564532-uc7t5tirr67fd613v56qth4bsrgag1st.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAMyhRxJil3XxApvqyR3HXAV1MZNUuNd6g"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "249430564532-uc7t5tirr67fd613v56qth4bsrgag1st.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
