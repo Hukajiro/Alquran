@@ -30,6 +30,10 @@ public class SurahDetailActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_surah_detail);
 
+        if (getSupportActionBar() != null) {
+            getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        }
+
         recyclerView = findViewById(R.id.rv_ayah);
         progressBar = findViewById(R.id.progress_bar);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
@@ -134,5 +138,11 @@ public class SurahDetailActivity extends AppCompatActivity {
     protected void onDestroy() {
         super.onDestroy();
         MediaPlayerManager.stop();
+    }
+
+    @Override
+    public boolean onSupportNavigateUp() {
+        finish();
+        return true;
     }
 }
