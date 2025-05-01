@@ -100,9 +100,10 @@ public class LoginActivity extends AppCompatActivity {
                 .addOnCompleteListener(this, task -> {
                     if (task.isSuccessful()) {
                         FirebaseUser user = mAuth.getCurrentUser();
-                        updateUI(user);
+                        updateUI(user); // Pindah ke MainActivity hanya jika login berhasil
                     } else {
                         Toast.makeText(this, "Authentication Failed.", Toast.LENGTH_SHORT).show();
+                        updateUI(null); // Tetap di LoginActivity jika login gagal
                     }
                 });
     }
